@@ -4,10 +4,10 @@ def minimax(tree, depth):
  for _ in range(depth):
   zipped = zip(tree[::2], tree[1::2])
   if max_turn:
-   tree = [max(a, b) for a, b in zipped] # max player
+   tree = [max(a, b) for a, b in zipped] 
   else:
-   tree = [min(a, b) for a, b in zipped] # min player
-  max_turn = not max_turn # swapping turns
+   tree = [min(a, b) for a, b in zipped]
+  max_turn = not max_turn
  return tree[0]
 A = [3, 5, 2, 9, 12, 5, 23, 23]
 depth = math.ceil(math.log(len(A), 2))
